@@ -1,0 +1,292 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-padding-top: 4rem;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+}
+.portfolio-container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+}
+
+.navlist{
+    display: flex;
+    gap: 3.5rem;
+    height: 15vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+}
+.navlist li{
+    list-style: none;
+    color: inherit;
+}
+.navlist li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: #fff;
+    position: relative;
+}
+.left-container,
+.right-container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.left-container{
+    background: #262525;
+    width: 70%;
+    padding-left: 3rem;
+}
+.right-container{
+    background: linear-gradient(-45deg, rgb(232, 124, 247), #262525 70%);
+    width: 30%;
+}
+.icons .fa-brands{
+    color: #bbb;
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+.icons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+.content{
+    margin-left: 4rem;
+}
+.content .intro{
+    font-size: 2.7rem;
+    color: #fff;
+}
+.content .intro span{
+    color: rgb(232, 124, 247);
+}
+.content h1{
+    font-size: 2rem;
+    color: rgb(232, 124, 247);
+}
+.content .detail{
+    font-size: 1.1rem;
+    color: #fff;
+    max-width: 38rem;
+    margin: 1.1rem 0 3rem 0;
+    line-height: 1.8rem;
+}
+.btn-container button{
+    border: 0.1rem solid rgb(232, 124, 247);
+    font-size: 1.1rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+button:nth-child(1){
+    background: rgb(232, 124, 247);
+    color: #262525;
+}
+button:nth-child(2){
+    background: transparent;
+    color: rgb(232, 124, 247);
+    margin-left: 2rem;
+}
+button:nth-child(1):hover{
+    background: transparent;
+    color: rgb(232, 124, 247);
+}
+button:nth-child(2):hover{
+    background: rgb(232, 124, 247);
+    color: #262525;
+}
+.icons .fa-brands:hover{
+    background: linear-gradient(#fff, rgb(232, 124, 247));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.design .circle{
+    aspect-ratio: 1;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+}
+.circle:nth-child(1){
+    background: linear-gradient(90deg, transparent 50%, #262525 50%);
+    width: 38rem;
+}
+.circle:nth-child(2){
+    background-image: url("img/Snapchat-1317667600.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 30rem;
+    border: 1rem solid white;
+    box-shadow: 
+    0 0 1rem #fff,
+    inset 0 0 1rem #fff,
+    0 0 2rem rgb(232, 124, 247),
+    inset 0 0 2rem rgb(232, 124, 247),
+    0 0 4rem rgb(232, 124, 247),
+    inset 0 0 4rem rgb(232, 124, 247);
+}
+.navlist li a::after, .navlist .active::after{
+    content: "";
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    height: 0.1rem;
+    left: 0;
+    bottom: -5px;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.5s;
+}
+.navlist li a:hover::after, .navlist .active::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+/* About */
+.about{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(17rem,auto));
+    gap: 1.5rem;
+    margin-top: 240px;
+    background: linear-gradient(60deg, rgb(232, 124, 247)0%, #485563 100%); 
+}
+.about-img img{
+    border-radius: 0.5rem;
+    height: 300px;
+    width: 300px;
+}
+.about-text h2{
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+.about-text p{
+    font-size: 0.938rem;
+    margin: 0.5rem 0 1.1rem;
+    letter-spacing: 1px;
+    margin-bottom: 50px;
+}
+section{
+    padding: 50px 100px;
+}
+img{
+    width: 100%;
+}
+.btn{
+    /* padding: 10px 40px;
+    border-radius: 0.3rem;
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    font-weight: 500; */
+    border: 0.1rem solid rgb(232, 124, 247);
+    font-size: 1.1rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: 0.5s ease;
+    background: transparent;
+    color: rgb(232, 124, 247);
+}
+.btn:hover{
+    /* background-color: #8a6f4d; */
+    background: rgb(232, 124, 247);
+    color: white;
+}
+/* Contact */
+.contact-section{
+    display: flex;
+    flex-direction: column;
+    margin-block: 240px;
+}
+.contact-me{
+    width: 100%;
+    text-align: center;
+}
+.contact-me span{
+    color: rgb(232, 124, 247);
+}
+.contact{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+}
+.email,
+.phoneNumber{
+    background: #fff;
+    /* box-shadow: 0 0 18px 0 #0000002c; */
+    box-shadow: -13px 10px 45px -7px #000000;
+    border: 8px solid grey;
+    border-radius: 10px;
+    height: 200px;
+    width: 300px;
+    text-align: center;
+}
+.email i,
+.phoneNumber i{
+    margin-block: 8px;
+}
+.email:hover,
+.phoneNumber:hover{
+    border: 8px solid rgb(232, 124, 247);
+}
+.email .fa-regular{
+    font-size: 4rem;
+}
+.phoneNumber .fa-solid{
+    margin-top: 8px;
+    font-size: 4rem;
+}
+/* Service */
+.service-container{
+    /* background: linear-gradient(60deg, rgb(232, 124, 247)0%, #485563 100%); */
+    margin-block: 350px;
+}
+.service-heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.service-heading h1{
+   text-transform: uppercase; 
+}
+.service-heading h1 span{
+    color: rgb(255, 100, 126);
+    text-transform: uppercase; 
+}
+.service-heading p{
+    width: 700px;
+}
+.web-descrip{
+    background: linear-gradient(60deg, rgb(232, 124, 247)0%, #485563 100%);;
+    width: 70%;
+    height: 300px;
+    margin-inline: auto;
+    margin-block: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+    border-radius: 10px;
+}
+.web-descrip i{
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+.web-descrip h4{
+    font-size: 20px;
+    margin-block: 20px;
+
+}
